@@ -26,5 +26,9 @@ namespace Bai1_th.Controllers
 
             return View();
         }
+        public ActionResult DangKy()
+        {
+            return View();
+        }
     }
 }
