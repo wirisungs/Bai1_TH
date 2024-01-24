@@ -20,13 +20,15 @@ namespace Bai1_th.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult GioHang()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
         public ActionResult DangKy()
+        {
+            return View();
+        }
+        public ActionResult DangNhap()
         {
             return View();
         }
