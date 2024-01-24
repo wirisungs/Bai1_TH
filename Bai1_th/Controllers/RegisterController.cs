@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Bai1_th.Models;
 
 namespace Bai1_th.Controllers
 {
-    public class LoginController : Controller
+    public class RegisterController : Controller
     {
-        DBQLCLOTHEntities1 database = new DBQLCLOTHEntities1();
+        DBQLCLOTHEntities database = new DBQLCLOTHEntities();
 
         public ActionResult Login()
         {
@@ -32,7 +33,7 @@ namespace Bai1_th.Controllers
                 {
                     Session["userName"] = _user.UserName;
 
-                    return RedirectToAction("Home", "Login");
+                    return RedirectToAction("Home", "Register");
                 }
             }
             catch
@@ -68,9 +69,6 @@ namespace Bai1_th.Controllers
             }
         }
 
-
-
-
         public ActionResult Home()
         {
             return View();
@@ -80,7 +78,6 @@ namespace Bai1_th.Controllers
         {
             return View();
         }
-
 
     }
 }

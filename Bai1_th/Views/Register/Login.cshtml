@@ -1,4 +1,4 @@
-﻿@model WebTraining1.Models.User
+﻿@model Bai1_th.Models.User
 
 @{
     ViewBag.Title = "Login";
@@ -88,7 +88,7 @@
     }
 </style>
 
-@using (Html.BeginForm("AuthenLogin", "Login", FormMethod.Post))
+@using (Html.BeginForm("AuthenLogin", "Register", FormMethod.Post))
 {
     <div class="all-login">
         <h2>Đăng nhập</h2>
@@ -121,7 +121,7 @@
             </table>
         </div>
         <div class="repass">
-            <p>Nếu bạn chưa có tài khoản hãy<a href="@Url.Action("Register", "Login")"> Đăng kí</a></p>
+            <p>Nếu bạn chưa có tài khoản hãy<a href="@Url.Action("Register", "Register")"> Đăng kí</a></p>
         </div>
         <input type="submit" value="Đăng Nhập" />
     </div>
