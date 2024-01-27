@@ -1,0 +1,128 @@
+﻿@model Bai1_th.Models.User
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .all-login {
+        background: #f0f0f0;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        text-align: center;
+        float: left;
+    }
+
+    .input-field {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .error-message h5 {
+        color: red;
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    h5 {
+        color: red;
+    }
+
+    h2 {
+        padding-top: 20px;
+    }
+
+    .name th {
+        padding-right: 10px;
+    }
+
+    .pass th {
+        padding-right: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    th {
+        background-color: #f2f2f2; 
+    }
+
+    tr:not(:last-child) {
+        margin-bottom: 10px; 
+    }
+
+    field-validation-error {
+        color: darkred;
+    }
+</style>
+
+@using (Html.BeginForm("AuthenLogin", "Register", FormMethod.Post))
+{
+    <div class="all-login">
+        <h2>Đăng nhập</h2>
+        <div class="name">
+            <table>
+                <tr>
+                    <th>
+                        <label for="userName">Tên đăng nhập</label>
+                    </th>
+                    <td>
+                        @Html.TextBoxFor(m => m.UserName)
+                        @Html.ValidationMessageFor(m => m.UserName)
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="pass">
+            <table>
+                <tr>
+                    <th style="padding-right:44px;">
+                        <label for="userPass">Mật Khẩu</label>
+                    </th>
+                    <td>
+                        @Html.PasswordFor(m => m.PassWord)
+                        @Html.ValidationMessageFor(m => m.PassWord)
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="repass">
+            <p>Nếu bạn chưa có tài khoản hãy<a href="@Url.Action("Register", "Register")"> Đăng kí</a></p>
+        </div>
+        <input type="submit" value="Đăng Nhập" />
+    </div>
+}
