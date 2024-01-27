@@ -1,0 +1,208 @@
+﻿@model Bai1_th.Models.User
+
+
+@{
+    ViewBag.Title = "Register";
+
+}
+
+<style>
+    html, body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 140vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .all-login {
+        background: #f0f0f0;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        width: 600px;
+        text-align: center;
+    }
+
+    .input-field {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .error-message {
+        color: red;
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background: #28a745; /* Bootstrap's success color */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    h5 {
+        color: red;
+    }
+
+
+
+    .all-login h2 {
+        padding-bottom: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    th {
+        background-color: #f2f2f2; /* Màu nền cho tiêu đề */
+    }
+
+    tr:not(:last-child) {
+        margin-bottom: 10px; /* Khoảng cách giữa các dòng, ngoại trừ dòng cuối cùng */
+    }
+
+    .field-validation-error {
+        color: darkred;
+    }
+
+
+    table {
+        width: 550px;
+    }
+</style>
+<div class="all">
+    @using (Html.BeginForm("AuthenRegister", "Register", FormMethod.Post))
+    {
+        <div class="all-login">
+            <h2>Đăng Ký</h2>
+            <table>
+                <tr>
+                    <th>
+                        <label for="userName">Tên đăng nhập</label>
+                    </th>
+                    <td>
+                        @Html.TextBoxFor(m => m.UserName)
+                        @Html.ValidationMessageFor(m => m.UserName)
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        <label for="userPass">Mật Khẩu</label>
+                    </th>
+                    <td>
+                        @Html.PasswordFor(m => m.PassWord)
+                        @Html.ValidationMessageFor(m => m.PassWord)
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        <label for="FName">Họ</label>
+                    </th>
+                    <td>
+                        @Html.TextBoxFor(m => m.FName)
+                        @Html.ValidationMessageFor(m => m.FName)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="LName">Tên</label>
+                    </th>
+                    <td>
+                        @Html.TextBoxFor(m => m.LName)
+                        @Html.ValidationMessageFor(m => m.LName)
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        <label for="Email">Email</label>
+                    </th>
+                    <td>
+                        @Html.TextBoxFor(m => m.Email)
+                        @Html.ValidationMessageFor(m => m.Email)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="Address">Address</label>
+                    </th>
+                    <td>
+                        @Html.TextBoxFor(m => m.Address)
+                        @Html.ValidationMessageFor(m => m.Address)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="Phone">Phone</label>
+                    </th>
+                    <td>
+                        @Html.TextBoxFor(m => m.Phone)
+                        @Html.ValidationMessageFor(m => m.Phone)
+                    </td>
+                </tr>
+               
+                <tr>
+                    <th>
+                        <label for="DoB">Ngày Sinh</label>
+                    </th>
+                    <td>
+                        @Html.TextBoxFor(m => m.DoB, "{0:yyyy-MM-dd}", new { @class = "datepicker" }) <!-- Thêm class datepicker cho việc chọn ngày -->
+                        @Html.ValidationMessageFor(m => m.DoB)
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        <label for="Gender">Giới Tính</label>
+                    </th>
+                    <td>
+                        @Html.DropDownListFor(m => m.Gender, new List<SelectListItem>
+                        {
+                            new SelectListItem { Text = "Nam", Value = "1" },
+                            new SelectListItem { Text = "Nữ", Value = "2" }
+                        }, "-- Chọn giới tính --")
+                        @Html.ValidationMessageFor(m => m.Gender)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Đăng Ký" class="btn btn-success" />
+                    </td>
+                </tr>
+
+            </table>
+            <p>Nếu bạn đã có tài khoản hãy<a href="@Url.Action("Login", "Register")"> Đăng nhập</a></p>
+        </div>
+    }
+</div>
+
+<!-- Thêm đoạn script này để kích hoạt datepicker -->
+<script>
+    $(function () {
+        $(".datepicker").datepicker({ dateFormat: 'yy-mm-dd' });
+    });
+</script>
+
+

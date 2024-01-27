@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+
+}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 100vh; /* Đảm bảo footer ở dưới cùng của trang */
+    }
+
+    header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .introduction, .features, .how-to-shop {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+        .features ul, .how-to-shop ol {
+            list-style-type: none;
+            padding: 0;
+        }
+
+            .features ul li, .how-to-shop ol li {
+                margin-bottom: 10px;
+            }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: white;
+        width: 100%;
+    }
+</style>
+<body>
+    <header>
+        <h1>Chào mừng bạn đến với Trang Web Bán Hàng TAT</h1>
+    </header>
+
+    <section class="introduction">
+        <p>Chúng tôi tự hào giới thiệu đến bạn một trải nghiệm mua sắm trực tuyến tuyệt vời. Tại trang web của chúng tôi, bạn sẽ tìm thấy một loạt các sản phẩm chất lượng từ nhiều danh mục khác nhau.</p>
+    </section>
+
+    <section class="features">
+        <h2>Tính Năng Nổi Bật</h2>
+        <ul>
+            <li><strong>Đa dạng Sản Phẩm:</strong> Chúng tôi cung cấp một loạt đa dạng sản phẩm đến công nghệ.</li>
+            <li><strong>Ưu Đãi Hấp Dẫn:</strong> Nhận những ưu đãi đặc biệt và giảm giá khi mua sắm trực tuyến.</li>
+            <li><strong>Giao Hàng Nhanh Chóng:</strong> Dịch vụ giao hàng nhanh chóng để bạn nhận được sản phẩm mình chọn một cách thuận lợi.</li>
+            <li><strong>Hỗ Trợ Khách Hàng:</strong> Đội ngũ hỗ trợ khách hàng 24/7 để giải đáp mọi thắc mắc của bạn.</li>
+        </ul>
+    </section>
+
+    <section class="how-to-shop">
+        <h2>Cách Mua Sắm</h2>
+        <p>Để mua sắm trên trang web của chúng tôi, bạn chỉ cần thực hiện các bước đơn giản sau:</p>
+        <ol>
+            <li><a href="@Url.Action("Register", "Register")">Đăng kí</a> tài khoản hoặc <a href="@Url.Action("Login", "Register")">Đăng nhập</a> nếu bạn đã có tài khoản.</li>
+            <li>Duyệt qua các danh mục sản phẩm và chọn sản phẩm bạn muốn mua.</li>
+            <li>Thêm sản phẩm vào giỏ hàng và tiến hành thanh toán.</li>
+            <li>Chờ đợi nhận hàng tận nhà và thưởng thức trải nghiệm mua sắm của bạn!</li>
+
+        </ol>
+    </section>
+
+
+</body>
+
+

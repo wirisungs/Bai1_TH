@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7c905e5bf9d54fb28f94a1539f2b9699" Name="Diagram1">
+        <EntityTypeShape EntityType="DBQLCLOTHModel.AdminUser" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLCLOTHModel.CTHoaDon" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLCLOTHModel.HoaDon" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLCLOTHModel.LoaiSanPham" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLCLOTHModel.SanPham" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLCLOTHModel.User" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="DBQLCLOTHModel.FK__CTHoaDon__IdInvo__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQLCLOTHModel.FK__CTHoaDon__IdPro__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQLCLOTHModel.FK__HoaDon__UserName__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQLCLOTHModel.FK__SanPham__IdCate__3D5E1FD2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
