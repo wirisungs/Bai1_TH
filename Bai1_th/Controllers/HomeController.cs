@@ -8,27 +8,12 @@ namespace Bai1_th.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Home()
         {
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult GioHang()
-        {
-            return View();
-        }
-        public ActionResult DangKy()
-        {
-            return View();
-        }
-        public ActionResult DangNhap()
+        public ActionResult Info()
         {
             return View();
         }

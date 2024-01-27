@@ -1,0 +1,118 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    
+}
+.all-login {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background: #f4efeb;
+    padding: 20px 30px 10px 30px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-items: center;
+}
+    .all-login h2 {
+        color: #776B5D;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .all-login .loginArea{
+        width: 80%;
+    }
+    .all-login .loginArea table{
+        width: 100%;
+    }
+        .all-login .loginArea table input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .all-login .loginArea table select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+    .all-login #btnSubmit {
+        width: 40%;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        background: #d2c0b2;
+        color: white;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+        .all-login #btnSubmit:hover {
+            background-color: rgba(210, 192, 178, 0.9);
+        }
+
+
+/*Register Form*/
+.all-reg {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background: #f4efeb;
+    padding: 20px 30px 10px 30px;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-items: center;
+}
+.all-reg h2 {
+    color: #776B5D;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.all-reg .regArea {
+    width: 80%;
+}
+
+    .all-reg .loginArea table {
+        width: 100%;
+    }
+
+        .all-reg .regArea table input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .all-reg .regArea table select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+.all-reg #btnSubmit {
+    width: 40%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #d2c0b2;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+    .all-reg #btnSubmit:hover {
+        background-color: rgba(210, 192, 178, 0.9);
+    }

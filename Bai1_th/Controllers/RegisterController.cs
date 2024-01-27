@@ -10,7 +10,7 @@ namespace Bai1_th.Controllers
     public class RegisterController : Controller
     {
         DBQLCLOTHEntities database = new DBQLCLOTHEntities();
-
+        
         public ActionResult Login()
         {
             return View();
@@ -67,11 +67,6 @@ namespace Bai1_th.Controllers
                 // Xử lý exception (nếu cần thiết)
                 return View("Register", _user);
             }
-        }
-
-        public ActionResult Home()
-        {
-            return View();
         }
 
         public ActionResult AdminORUser()
