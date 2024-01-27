@@ -11,7 +11,9 @@ namespace Bai1_th.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Web;
+
     public partial class SanPham
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,7 +21,7 @@ namespace Bai1_th.Models
         {
             this.CTHoaDons = new HashSet<CTHoaDon>();
         }
-    
+
         public int IdPro { get; set; }
         public string NamePro { get; set; }
         public Nullable<int> Qty { get; set; }
@@ -27,9 +29,19 @@ namespace Bai1_th.Models
         public string Description { get; set; }
         public string ImagePath { get; set; }
         public Nullable<short> IdCate { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHoaDon> CTHoaDons { get; set; }
         public virtual LoaiSanPham LoaiSanPham { get; set; }
+
+
+        public static string SERVER_IMG_PATH = "~/Images/";
+        [NotMapped]
+
+        public HttpPostedFileBase UploadImage { get; set; }
+        public DateTime CreatedDate { get; internal set; }
     }
 }
+    
+
+    
